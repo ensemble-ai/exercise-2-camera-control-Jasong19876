@@ -16,9 +16,10 @@ extends Camera3D
 func _ready() -> void:
 	current = false
 	position += Vector3(0.0, dist_above_target, 0.0) 
-
+	draw_camera_logic = true
 
 func _process(delta: float) -> void:
+	draw_camera_logic = true
 	if Input.is_action_just_pressed("fire1"):
 		draw_camera_logic = !draw_camera_logic
 	if Input.is_action_pressed("zoom_in"):
